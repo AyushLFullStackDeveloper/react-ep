@@ -1,14 +1,11 @@
 import React from "react";
-// import Certificates from "./pages/Certificates";
-// import  Contact  from "./pages/Contact";
-import ProfileCard from "./pages/Portfolio";
+import  Contact  from "./pages/Contact";
+
 
 function App() {
   return (
     <div className="App">
-      {/* <Certificates /> */}
-      {/* <Contact /> */}
-      <ProfileCard />
+      <Contact /> 
     </div>
   );
 }
