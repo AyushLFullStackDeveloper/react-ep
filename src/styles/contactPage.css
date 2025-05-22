@@ -1,0 +1,134 @@
+/* src/styles/ContactPage.css */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+.contact-container {
+  padding: 60px 20px;
+  text-align: center;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 48px;
+  color: #2196f3;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #2196f3;
+  margin: 10px auto 0;
+}
+
+.contact-subtitle h2 {
+  color: #2196f3;
+  font-size: 36px;
+  margin: 40px 0 10px;
+}
+
+.contact-subtitle p {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  row-gap: 60px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-item:hover .contact-icon {
+  transform: scale(1.2);
+}
+
+.contact-icon {
+  font-size: 36px;
+  color: #2196f3;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+.contact-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 5px 0;
+  cursor: text;
+}
+
+.contact-link {
+  font-size: 16px;
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  margin-top: 0;
+  border: none;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .contact-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-title {
+    font-size: 38px;
+  }
+
+  .contact-subtitle h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-item {
+    width: 100%;
+  }
+}

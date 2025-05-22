@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Base layout for React version */
+.app {
+    display: flex;
+    min-height: 100vh;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .content-wrapper {
+    display: flex;
+    flex: 1;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .navigation {
+    width: 270px;
+    background-color: var(--bg-black-100);
+    padding: 30px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid var(--bg-black-50);
+    transition: all 0.3s ease;
   }
-}
+  
+  .main-content {
+    flex: 1;
+    margin-left: 270px;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 1199px) {
+    .navigation {
+      left: -270px;
+    }
+    
+    .main-content {
+      margin-left: 0;
+    }
+    
+    .navigation.open {
+      left: 0;
+    }
+  }
+  
+  /* Theme styles */
+  .dark {
+    --bg-black-50: #393939;
+    --text-black-600: #bbbbbb;
+  }
+  
+  .light {
+    --bg-black-900: #ffffff;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+    --text-black-600: #6f6d8a;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  * {
+    margin: 0; 
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  ::before, ::after {
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+  }
+  
+  .padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
